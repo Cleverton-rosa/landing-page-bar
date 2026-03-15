@@ -1,0 +1,653 @@
+/* =========================
+   GOOGLE FONTS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+/* =========================
+   RESET & NORMALIZE
+========================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+/* Bootstrap overrides */
+.container {
+  --bs-gutter-x: 1.5rem;
+}
+
+.btn {
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-padding-y: 0.75rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: var(--transicao);
+  text-decoration: none;
+}
+
+.btn:focus, .btn.focus {
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
+
+
+/* =========================
+   DESIGN SYSTEM
+========================= */
+
+:root{
+
+--marrom-escuro:#2C1810;
+--marrom-madeira:#4A2C20;
+--marrom-medio:#6B4E31;
+
+--fundo-principal:#F8F4EF;
+--fundo-claro:#FDFAF6;
+--fundo-card:#FFFFFF;
+
+--amarelo-destaque:#D4AF37;
+--amarelo-quente:#FFC107;
+
+--texto-principal:#1B1B1B;
+--texto-secundario:#5D4037;
+--texto-claro:#FFFFFF;
+
+--sombra-leve:0 2px 10px rgba(44,24,16,.1);
+--sombra-media:0 8px 25px rgba(44,24,16,.15);
+--sombra-forte:0 15px 40px rgba(44,24,16,.25);
+
+--raio-pequeno:8px;
+--raio-medio:20px;
+--raio-grande:30px;
+
+--transicao:all .3s ease;
+
+}
+
+
+/* =========================
+   BASE
+========================= */
+
+body{
+
+font-family:'Open Sans',sans-serif;
+line-height:1.6;
+
+color:var(--texto-principal);
+
+background:var(--fundo-principal);
+
+}
+
+.container{
+
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1,h2,h3{
+
+font-family:'Playfair Display',serif;
+
+}
+
+h1{
+
+font-size:clamp(3rem,8vw,5rem);
+
+}
+
+h2{
+
+font-size:clamp(2rem,5vw,3rem);
+
+margin-bottom:30px;
+
+}
+
+.section-title{
+
+text-align:center;
+color:var(--marrom-escuro);
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+background:
+linear-gradient(
+rgba(44,24,16,0.75),
+rgba(44,24,16,0.75)
+),
+url("../img/img\ 1.jpeg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+min-height:100vh;
+
+display:flex;
+flex-direction:column;
+
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+padding:20px;
+
+}
+
+.hero p{
+
+font-size:1.4rem;
+max-width:600px;
+margin:20px 0 30px;
+
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn{
+
+display:inline-block;
+
+padding:14px 30px;
+
+background:var(--amarelo-destaque);
+
+color:var(--texto-principal);
+
+font-weight:600;
+
+text-decoration:none;
+
+border-radius:30px;
+
+transition:var(--transicao);
+
+box-shadow:var(--sombra-media);
+
+margin:5px;
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:var(--sombra-forte);
+
+}
+
+.btn-secondary{
+
+background:transparent;
+
+border:2px solid var(--amarelo-quente);
+
+color:white;
+
+}
+
+.btn-secondary:hover{
+
+background:var(--amarelo-quente);
+
+color:var(--texto-principal);
+
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+
+padding:80px 20px;
+
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+#sobre{
+
+text-align:center;
+
+}
+
+#sobre p{
+
+max-width:700px;
+
+margin:auto;
+
+background:var(--fundo-card);
+
+padding:40px;
+
+border-radius:var(--raio-medio);
+
+box-shadow:var(--sombra-media);
+
+font-size:1.2rem;
+
+}
+
+
+/* =========================
+   DESTAQUES
+========================= */
+
+.destaques{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+.destaque-card{
+
+background:var(--fundo-card);
+
+padding:35px 25px;
+
+text-align:center;
+
+border-radius:var(--raio-medio);
+
+box-shadow:var(--sombra-media);
+
+transition:var(--transicao);
+
+}
+
+.destaque-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--sombra-forte);
+
+}
+
+.icon{
+  font-size: 3rem;
+  color: var(--amarelo-destaque);
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.destaque-card .icon {
+  font-size: 3.5rem;
+}
+
+.icon.small {
+  font-size: 1.5rem;
+}
+
+.destaque-card h3{
+
+color:var(--marrom-escuro);
+
+margin-bottom:10px;
+
+}
+
+
+/* =========================
+   HORÁRIO
+========================= */
+
+#horario{
+
+background:var(--marrom-madeira);
+
+color:white;
+
+text-align:center;
+
+}
+
+.horario-card{
+
+background:var(--fundo-card);
+
+color:var(--texto-principal);
+
+padding:40px;
+
+border-radius:var(--raio-grande);
+
+box-shadow:var(--sombra-media);
+
+max-width:500px;
+
+margin:auto;
+
+}
+
+.horario-list{
+
+list-style:none;
+
+}
+
+.horario-list li{
+
+font-size:1.2rem;
+
+margin:10px 0;
+
+}
+
+
+/* =========================
+   MAPA
+========================= */
+
+#localizacao iframe{
+
+width:100%;
+
+height:450px;
+
+border:none;
+
+border-radius:var(--raio-grande);
+
+box-shadow:var(--sombra-media);
+
+}
+
+.map-btn{
+
+margin-top:25px;
+
+text-align:center;
+
+}
+
+.map-info{
+
+text-align:center;
+
+margin-top:15px;
+
+color:var(--marrom-madeira);
+
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+#contato{
+
+text-align:center;
+
+}
+
+.contact-item{
+
+font-size:1.3rem;
+
+margin:15px 0;
+
+}
+
+.contact-item a{
+
+color:var(--marrom-madeira);
+
+text-decoration:none;
+
+}
+
+.contact-item a:hover{
+
+text-decoration:underline;
+
+}
+
+
+/* =========================
+   CTA FINAL
+========================= */
+
+.cta-final{
+
+background:var(--marrom-escuro);
+
+color:white;
+
+text-align:center;
+
+padding:100px 20px;
+
+}
+
+.cta-buttons{
+
+margin-top:20px;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+background:var(--marrom-escuro);
+
+color:white;
+
+text-align:center;
+
+padding:40px 20px;
+
+}
+
+.social-icons{
+
+margin:20px 0;
+
+}
+
+.social-icons a{
+
+font-size:1.8rem;
+
+margin:0 10px;
+
+color:white;
+
+text-decoration:none;
+
+transition:var(--transicao);
+
+}
+
+.social-icons a:hover{
+
+color:var(--amarelo-quente);
+
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  background: rgba(44, 24, 16, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--sombra-media);
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: var(--texto-claro) !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: var(--transicao);
+}
+
+.nav-link:hover {
+  color: var(--amarelo-destaque) !important;
+}
+
+/* =========================
+   BOTÕES FLUTUANTES
+========================= */
+
+#whatsappFloat{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 65px;
+  height: 65px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+  box-shadow: var(--sombra-forte);
+  z-index: 999;
+  transition: var(--transicao);
+}
+
+#whatsappFloat:hover {
+  transform: scale(1.1);
+  box-shadow: var(--sombra-forte);
+}
+
+#backTop{
+
+position:fixed;
+
+bottom:25px;
+left:25px;
+
+width:55px;
+height:55px;
+
+background:var(--marrom-madeira);
+
+color:white;
+
+border:none;
+
+border-radius:50%;
+
+font-size:1.3rem;
+
+cursor:pointer;
+
+box-shadow:var(--sombra-media);
+
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:768px){
+
+.hero{
+
+min-height:80vh;
+
+}
+
+.hero p{
+
+font-size:1.2rem;
+
+}
+
+section{
+
+padding:60px 15px;
+
+}
+
+#localizacao iframe{
+
+height:350px;
+
+}
+
+}
+
+/* fade animation */
+
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+transition:opacity .6s ease, transform .6s ease;
+}
+
+.fade-in.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+
+/* back to top animation */
+
+#backTop{
+opacity:0;
+visibility:hidden;
+transition:all .3s ease;
+}
+
+#backTop.show{
+opacity:1;
+visibility:visible;
+}
