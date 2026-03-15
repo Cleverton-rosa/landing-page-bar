@@ -1,37 +1,48 @@
-# Landing Page - Bar da Claudete
+# 🍺 Bar da Claudete
 
-## 🚀 Como visualizar
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?logo=github)](https://cleverton-rosa.github.io/landing-page-bar/)
 
-Abra o arquivo `index.html` no navegador ou execute:
+Landing page responsiva para Bar da Claudete - bairro Baronesa, Chapecó SC.
 
-```bash
-npx live-server
+## 🚀 Demo
+
+**[VER SITE AO VIVO](https://cleverton-rosa.github.io/landing-page-bar/)**
+
+## ✨ Funcionalidades
+
+- 🎨 Design rústico brasileiro
+- 📱 Responsivo mobile-first
+- 🗺️ Google Maps integrado
+- 💬 WhatsApp flutuante
+- ⚡ Navbar sticky
+- 🎭 Animações suaves
+
+## 🛠️ Stack
+
+| Frontend | Framework | Icons |
+|----------|-----------|-------|
+| HTML5/CSS3 | Bootstrap 5 | Bootstrap Icons |
+
+## 📁 Estrutura
+
+```
+.
+├── index.html
+├── css/style.css
+├── js/script.js
+├── img/
+└── README.md
 ```
 
-## 📱 Responsivo
-Testado em mobile e desktop.
+## 📞 Bar da Claudete
 
-## 📍 Google Maps
-Embed do mapa fornecido pelo usuário incluído.
+```
+📍 Baronesa, Chapecó - SC
+📱 (49) 99924-9115
+🕐 08h - 19h todos dias
+🗺️ Google Maps
+```
 
-## 🎨 Cores
-- Vermelho escuro (#8B0000)
-- Amarelo (#FFD700)
-- Preto/Branco
+## 📄 Licença
 
-## Estrutura
-- `index.html`: Página principal
-- `css/style.css`: Estilos responsivos
-
-## ✨ Novas melhorias (Redesign Rústico):
-- Tema madeira/marrom/bege - estilo bar interior brasileiro
-- Animações scroll (AOS + vanilla JS)
-- Galeria com fotos
-- Footer profissional
-- Floating WhatsApp + back-to-top
-- Mapa com coords exatas
-- Micro-interações hovers
-
-Abra `index.html` ou `npx live-server` para preview.
-
-Pronto para deploy (GitHub Pages, Netlify, etc.)!
+[MIT](LICENSE)
